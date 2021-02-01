@@ -11,7 +11,7 @@ const url = 'http://api.weatherstack.com/current?access_key=47b92e5612680df5e220
         }
         else{
             callback( undefined,
-                'current weather is '+body.current.weather_descriptions[0]+
+                'Current weather of '+body.location.name+' ( '+ body.location.region+' ), '+body.location.country+' is '+body.current.weather_descriptions[0]+
                 '. Current temprature is ' +body.current.temperature +
                 ' and humidity is '+ body.current.humidity
             )
